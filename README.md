@@ -224,13 +224,15 @@ Use the following command to connect to your instance using the AWS CLI and make
 
 Install the Plugin. I used the Debian/Ubuntu package. Select the adequate package for your machine.
 
-Connect to your EC2 instance using the AWS CLI
+![alt text](image-1.png)
 
-![alt text](image.png)
+Connect to your EC2 instance using the AWS CLI
 
 ```
 aws ssm start-session \
 	--target instance-id
 ```
+
+![alt text](image-2.png)
 
 "Congratulations! You can now play around with your instance, and don’t forget to destroy your infrastructure when you’re done."
