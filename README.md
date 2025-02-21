@@ -235,4 +235,4 @@ aws ssm start-session \
 
 ![alt text](image-2.png)
 
-"Congratulations! You can now play around with your instance, and don’t forget to destroy your infrastructure when you’re done."
+Congratulations! You can now play around with your instance, and don’t forget to destroy your infrastructure when you’re done."
