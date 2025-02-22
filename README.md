@@ -2,6 +2,8 @@
 
 The purpose of this lab is to create a VPC with public and private subnets using Terraform. The infrastructure will consist of a VPC, a public and private subnet, an EC2 instance placed in the private subnet, an Internet Gateway attached to the VPC and a Nat Gateway which will provide internet connectivity to our EC2 instance in the private subnet. We will also configure all necessary resources so you can access your instance, including AWS Systems Manager SSM. 
 
+![alt text](Diagrams_Tutorials-VPC-NATGW.drawio.png)
+
 # Set up the AWS Provider
 In order to create this infrastructure, we are only going to make use the AWS provider. 
 
