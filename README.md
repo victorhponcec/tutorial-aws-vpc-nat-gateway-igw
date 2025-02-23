@@ -62,7 +62,7 @@ resource "aws_internet_gateway" "igw" {
 
 # Create a Nat Gateway
 
-Notice that we explicitly relate the Nat Gateway with the Internet Gateway created above.  
+First we need to create an Elastic IP for our Nat Gateway. Notice that we explicitly associate the Nat Gateway with the EIP and the Internet Gateway created above.
 
 ```
 #EIP for NAT Gateway
@@ -70,6 +70,14 @@ resource "aws_eip" "eip_ngw" {
  domain     = "vpc"
  depends_on = [aws_internet_gateway.igw]
 }
+
+#NAT Gateway
+resource "aws_nat_gateway" "ngw" {
+  allocation_id = aws_eip.eip_ngw.id
+  subnet_id     = aws_subnet.public_subnet.id #NATGW must be placed in public subnet
+  depends_on    = [aws_internet_gateway.igw]
+}
+
 
 ```
 

@@ -36,7 +36,7 @@ resource "aws_eip" "eip_ngw" {
 #NAT Gateway
 resource "aws_nat_gateway" "ngw" {
   allocation_id = aws_eip.eip_ngw.id
-  subnet_id     = aws_subnet.public_subnet.id #NGW must be placed in public subnet
+  subnet_id     = aws_subnet.public_subnet.id #NATGW must be placed in public subnet
   depends_on    = [aws_internet_gateway.igw]
 }
 
